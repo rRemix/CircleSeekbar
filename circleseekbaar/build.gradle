@@ -1,9 +1,8 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.novoda.bintray-release'
 
 android {
     compileSdkVersion 26
-
-
 
     defaultConfig {
         minSdkVersion 16
@@ -31,4 +30,14 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+}
+
+//22023ffcfad889ae487049a95f7c50fb522dfcef
+publish {
+    userOrg = 'xbr1010'
+    groupId = 'com.remix'
+    artifactId = 'circleseekbar'
+    publishVersion = '1.0.1'
+    desc = 'android circleSeekbar with shadow'
+    website = 'https://github.com/rRemix/CircleSeekbar'
 }
