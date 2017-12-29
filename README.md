@@ -1,5 +1,5 @@
 # CircleSeekbar
-圆形Seekbar
+带阴影的圆形Seekbar
 
 ## Screenshots
 
