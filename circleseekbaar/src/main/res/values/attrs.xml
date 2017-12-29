@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <declare-styleable name="CircleSeekBar">
-        <attr name="progress_thumb" format="reference"/>
-        <attr name="progress_width" format="dimension|reference"/>
-        <attr name="progress_color" format="color|reference" />
-        <attr name="progress_max" format="integer|reference" />
-        <attr name="track_color" format="color|reference"/>
-        <attr name="enable_shadow" format="boolean|reference"/>
-        <attr name="shadow_radius" format="dimension|reference"/>
-        <attr name="shadow_color" format="color|reference"/>
+        <attr name="progress_thumb" format="reference"/>  <!--指示器-->
+        <attr name="progress_width" format="dimension|reference"/>  <!--已完成轨道的宽度-->
+        <attr name="progress_color" format="color|reference" />  <!--已完成轨道的颜色-->
+        <attr name="progress_max" format="integer|reference" />  <!--最大值-->
+        <attr name="track_color" format="color|reference"/> <!--轨道背景颜色-->
+        <attr name="enable_shadow" format="boolean|reference"/> <!--是否启用阴影-->
+        <attr name="shadow_radius" format="dimension|reference"/> <!--阴影大小-->
+        <attr name="shadow_color" format="color|reference"/> <!--阴影颜色-->
     </declare-styleable>
 </resources>
