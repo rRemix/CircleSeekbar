@@ -5,8 +5,9 @@
         <attr name="progress_width" format="dimension|reference"/>
         <attr name="progress_color" format="color|reference" />
         <attr name="progress_max" format="integer|reference" />
+        <attr name="track_color" format="color|reference"/>
         <attr name="enable_shadow" format="boolean|reference"/>
         <attr name="shadow_radius" format="dimension|reference"/>
-
+        <attr name="shadow_color" format="color|reference"/>
     </declare-styleable>
 </resources>

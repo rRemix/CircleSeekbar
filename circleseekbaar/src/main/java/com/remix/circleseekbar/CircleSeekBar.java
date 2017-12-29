@@ -26,10 +26,6 @@ public class CircleSeekBar extends AbsSeekBar {
      */
     private boolean mEnableShadow = true;
     /**
-     * 阴影大小
-     */
-    private int mShadowRadius;
-    /**
      * 阴影圆圈画笔
      */
     private Paint mShadowCirclePaint;
@@ -226,7 +222,9 @@ public class CircleSeekBar extends AbsSeekBar {
         final TypedArray typedArray = mContext.obtainStyledAttributes(mAttrs, R.styleable.CircleSeekBar);
 
         mEnableShadow = typedArray.getBoolean(R.styleable.CircleSeekBar_enable_shadow,true);
-        mShadowRadius = typedArray.getDimensionPixelSize(R.styleable.CircleSeekBar_shadow_radius,9);
+        final int shadowRadius = typedArray.getDimensionPixelSize(R.styleable.CircleSeekBar_shadow_radius, 9);
+        final int shadowColor = typedArray.getColor(R.styleable.CircleSeekBar_shadow_color,Color.parseColor("#b7b7b7"));
+        final int trackColor = typedArray.getColor(R.styleable.CircleSeekBar_track_color,Color.parseColor("#b7b7b7"));
 
         mThumbDrawable = typedArray.getDrawable(R.styleable.CircleSeekBar_progress_thumb);
         if(mThumbDrawable == null){
@@ -240,11 +238,11 @@ public class CircleSeekBar extends AbsSeekBar {
         mProgressMax = typedArray.getInteger(R.styleable.CircleSeekBar_progress_max,600);
         typedArray.recycle();
 
-        //圆圈画笔
+        //轨道画笔
         mCirclePaint = new Paint();
         mCirclePaint.setAntiAlias(true);
         mCirclePaint.setStyle(Paint.Style.STROKE);
-        mCirclePaint.setColor(DEFAULT_COLOR);
+        mCirclePaint.setColor(trackColor);
         mCirclePaint.setStrokeWidth(mProgressWidth);
 
         //圆弧画笔
@@ -258,9 +256,9 @@ public class CircleSeekBar extends AbsSeekBar {
         mShadowCirclePaint = new Paint();
         mShadowCirclePaint.setAntiAlias(true);
         mShadowCirclePaint.setStyle(Paint.Style.STROKE);
-        mShadowCirclePaint.setColor(DEFAULT_COLOR);
+        mShadowCirclePaint.setColor(shadowColor);
         mShadowCirclePaint.setStrokeWidth(mProgressWidth);
-        mShadowCirclePaint.setShadowLayer(mShadowRadius,0,0,DEFAULT_COLOR);
+        mShadowCirclePaint.setShadowLayer(shadowRadius,0,0,shadowColor);
 
         setLayerType(LAYER_TYPE_SOFTWARE, mShadowCirclePaint);
 
