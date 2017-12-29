@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <com.remix.circleseekbar.CircleSeekBar
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:id="@+id/circleSeekbar"
+        app:progress_color="#000000"
+        app:progress_thumb="@drawable/bg_circleseekbar_thumb_black"
+        app:progress_max="1000"
+        app:progress_width="4dp"
+        app:enable_shadow="false"
+        app:shadow_radius="3dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/process"
+        android:textSize="16sp"
+        android:layout_marginTop="20dp"/>
+
+</LinearLayout>
