@@ -7,9 +7,15 @@
 
 
 ## Usage
+
+Glide添加引用
+``
+compile 'com.remix:circleseekbar:1.0.1'
+``
+
 xml中引用
 ```java
-<com.remix.circleseekbar.CircleSeekBar
+com.remix.circleseekbar.CircleSeekBar
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:id="@+id/circleSeekbar"
